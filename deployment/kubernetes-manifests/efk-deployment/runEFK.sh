@@ -7,7 +7,7 @@ echo '***Deploy EFK(elasticsearch、fluentd、kibana)***'
 kubectl apply -f .
 
 # get master IP address ---var3
-var1=`kubectl cluster-info | awk 'NR == 1 {print $6}'`
+var1=`kubectl cluster-info | awk 'NR == 1 {print $7}'`
 var2=${var1#*//}
 var3=${var2%:*}
 
